@@ -2,6 +2,6 @@ Doctor: <%= @doctor.name %><br>
 Department: <%= @doctor.department %>
 Appointments:
 <% @doctor.appointments.each do |appt| %>
-  Date: appt.appointment_datetime.strftime("%B %d, %Y") at appt.appointment_datetime.strftime("%H:%M")<br>
+  Date: <%= appt.appointment_datetime.strftime("%B %d, %Y") %> at <%= appt.appointment_datetime.strftime("%H:%M") %><br>
   Patient Name: <%= appt.patient.name %><br>
 <% end %>
